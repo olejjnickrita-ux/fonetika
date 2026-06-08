@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Путешествие в мир фонетики</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-decor">ФОНЕТИКА</div>
+  <main class="app">
+    <section id="startScreen" class="screen start active">
+      <div class="hero-card">
+        <div class="badge">интерактивная игра</div>
+        <h1>Путешествие<br>в мир фонетики</h1>
+        <button id="startBtn" class="primary">Начать игру</button>
+        <p class="credit">материал подготовлен https://margouchit.ru/</p>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <header class="topbar">
+        <button id="homeBtn" class="ghost">← На титульный</button>
+        <div class="progress-wrap">
+          <div class="progress-meta"><span id="stepLabel">Задание 1/10</span><span id="scoreLabel">0 баллов</span></div>
+          <div class="progress"><div id="progressFill"></div></div>
+        </div>
+      </header>
+      <article class="task-card">
+        <div id="taskMount"></div>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+        <div class="actions">
+          <button id="checkBtn" class="primary">Проверить</button>
+          <button id="nextBtn" class="secondary" disabled>Дальше</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="finalScreen" class="screen final">
+      <div class="hero-card">
+        <div class="badge">финиш</div>
+        <h2>Путешествие завершено!</h2>
+        <p id="finalScore" class="lead"></p>
+        <div class="repeat-box">
+          <h3>Темы, которые стоит повторить</h3>
+          <ul id="repeatList"></ul>
+        </div>
+        <button id="restartBtn" class="primary">Пройти ещё раз</button>
+      </div>
+    </section>
+  </main>
+  <script src="data.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
